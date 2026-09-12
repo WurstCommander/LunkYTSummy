@@ -1,0 +1,42 @@
+# Python
+__pycache__/
+*.py[cod]
+*$py.class
+
+# Virtual environments
+.venv/
+venv/
+env/
+ENV/
+.env
+.env.*
+!.env.example
+
+# Packaging and build tools
+build/
+dist/
+*.egg-info/
+pip-wheel-metadata/
+.eggs/
+
+# PyInstaller
+*.manifest
+*.spec.bak
+
+# Test and lint tools
+.pytest_cache/
+.mypy_cache/
+.ruff_cache/
+.tox/
+.coverage
+.coverage.*
+htmlcov/
+
+# IDE and editor files
+.idea/
+.vscode/
+
+# Logs and local configuration
+*.log
+# API keys and secrets
+key.ini
