@@ -1,0 +1,1 @@
+pyinstaller --onefile --noconsole --name "LunkYTSummy 0.26" app.py
