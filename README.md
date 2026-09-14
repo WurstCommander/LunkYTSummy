@@ -1,4 +1,4 @@
-# Lunk YT Summy - Dom't get clickbaited!
+# Lunk YT Summy - Youtube Video Summarizer - Don't get clickbaited!
  
 ## Description
 
