@@ -1,11 +1,14 @@
 # Lunk YT Summy - Youtube Video Summarizer - Don't get clickbaited!
  
-## Description
+## Screenshot of Video and Summary
 
 ![Screenshot of Summary from Lunk YT Summy](https://github.com/WurstCommander/LunkYTSummy/blob/main/pics/screenshot_readme_wow.jpg)
 
-Screenshot of Summary, it even "sees" that somebody is behind him in a Paladin outfit and includes it in the summary.
+Video: https://youtu.be/x3qbywIzzuc
 
+*Screenshot of Summary, it even "sees" that somebody is behind him in a Paladin outfit and includes it in the summary.*
+
+## Description
 
 Lunk YT Summy is a small desktop tool for generating summaries of YouTube videos using Google Gemini. 
 It is designed for people who want to understand the main points of a video without watching the full thing, the internet is big, too much clickbait and content creators reapting themselves over and over
