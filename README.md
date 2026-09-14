@@ -138,9 +138,7 @@ https://www.youtube.com/watch?v=H9PVWUvlOBY
 ## Disclaimer
 
 **Use this tool at your own risk.**
-The app depends on external services and your API key. Make sure you understand the usage limits, billing, and privacy implications of using Google Gemini.
-
-This project is meant for personal and experimental use.
+The app depends on external services and your API key. Make sure you understand the usage limits, billing, and such things when using Google Gemini. 
 
 ## Changelog 0.26
 
@@ -155,9 +153,5 @@ This project is meant for personal and experimental use.
 - Added basic YouTube URL validation
 - Added Gemini-based summarization through the desktop app
 
-## License
 
-This project is provided as-is for personal use and learning purposes.
-If you want to reuse or modify it, please keep attribution and respect the terms of the libraries and services it uses.
-
-Have a nice day, and stay cool, your WurstCommander
+Have a nice day, and stay cool, your WurstCommander!
