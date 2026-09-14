@@ -2,7 +2,7 @@
  
 ## Description
 
-![Screenshot of Summary from Lunk YT Summy](https://github.com/WurstCommander/LunkYTSummy/blob/main/pics/screenshot_readme_wow.jpg?raw=true "Screenshot of Summary")
+![Screenshot of Summary from Lunk YT Summy](https://github.com/WurstCommander/LunkYTSummy/blob/main/pics/screenshot_readme_wow.jpg)
 
 Screenshot of Summary, it even "sees" that somebody is behind him in a Paladin outfit and includes it in the summary.
 
