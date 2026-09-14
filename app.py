@@ -21,7 +21,7 @@ class YouTubeSummaryApp:
 
   def __init__(self, root):
     self.root = root
-    self.root.title("LunkYT Summy - Don't get clickbaited!")
+    self.root.title("Lunk YT Summy - Don't get clickbaited!")
     self.root.geometry("900x720")
     self.root.configure(bg="#f8fafc")
 
@@ -40,16 +40,15 @@ class YouTubeSummaryApp:
 
     tk.Label(
         top_row,
-        text="Lunk Youtube Summarizer",
+        text="Lunk YouTube Summarizer",
         font=("Segoe UI", 16, "bold"),
         bg="#f8fafc",
         fg="#0f172a",
     ).pack(side=tk.LEFT)
 
-    # Button um API-Key direkt in der GUI zu verwalten
     self.key_btn = tk.Button(
         top_row,
-        text="🔑 API-Key ändern",
+        text="🔑 Change API key",
         command=self.prompt_api_key,
         font=("Segoe UI", 9),
         bg="#e2e8f0",
@@ -63,7 +62,7 @@ class YouTubeSummaryApp:
 
     tk.Label(
         header_frame,
-        text="Füge einen YouTube-Link ein – der Link wird automatisch bereinigt und analysiert.",
+        text="Paste a YouTube link — the link will be cleaned up and analyzed automatically.",
         font=("Segoe UI", 9),
         bg="#f8fafc",
         fg="#64748b",
@@ -86,7 +85,7 @@ class YouTubeSummaryApp:
 
     self.submit_btn = tk.Button(
         input_frame,
-        text="Zusammenfassen",
+        text="Summarize",
         command=self.start_summary,
         font=("Segoe UI", 10, "bold"),
         bg="#0284c7",
@@ -100,13 +99,12 @@ class YouTubeSummaryApp:
     )
     self.submit_btn.pack(side=tk.RIGHT)
 
-    # Steuerungs-Leiste über der Ausgabe
     control_frame = tk.Frame(root, bg="#f8fafc")
     control_frame.pack(fill=tk.X, padx=20, pady=(10, 4))
 
     tk.Label(
         control_frame,
-        text="Zusammenfassung:",
+        text="Summary:",
         font=("Segoe UI", 10, "bold"),
         bg="#f8fafc",
         fg="#1e293b",
@@ -114,7 +112,7 @@ class YouTubeSummaryApp:
 
     self.copy_btn = tk.Button(
         control_frame,
-        text="In Zwischenablage kopieren",
+        text="Copy to clipboard",
         command=self.copy_to_clipboard,
         font=("Segoe UI", 9),
         bg="#e2e8f0",
@@ -188,16 +186,16 @@ class YouTubeSummaryApp:
   def prompt_api_key(self) -> str | None:
     current_key = self.config_manager.load_api_key()
     new_key = simpledialog.askstring(
-        "Gemini API-Key",
-        "Gib deinen Google Gemini API-Key ein:\n(Wird dauerhaft in key.ini gespeichert)",
+        "Gemini API Key",
+        "Enter your Google Gemini API key:\n(It will be saved permanently in key.ini)",
         initialvalue=current_key,
         parent=self.root,
     )
     if new_key and new_key.strip():
       self.config_manager.save_api_key(new_key.strip())
       messagebox.showinfo(
-          "Gespeichert",
-          "API-Key wurde erfolgreich in key.ini gespeichert!",
+          "Saved",
+          "API key was saved successfully to key.ini!",
           parent=self.root,
       )
       return new_key.strip()
@@ -209,8 +207,8 @@ class YouTubeSummaryApp:
       api_key = self.prompt_api_key()
       if not api_key:
         messagebox.showerror(
-            "Fehlender API-Key",
-            "Ohne API-Key kann keine Anfrage gestellt werden.",
+            "Missing API key",
+            "No request can be sent without an API key.",
         )
         return
 
@@ -218,8 +216,8 @@ class YouTubeSummaryApp:
     clean_url = extract_clean_youtube_url(raw_input)
     if not clean_url:
       messagebox.showwarning(
-          "Ungültige URL",
-          "Konnte keine gültige YouTube Video-ID erkennen. Bitte überprüfe den Link.",
+          "Invalid URL",
+          "Could not detect a valid YouTube video ID. Please check the link.",
       )
       return
 
@@ -230,15 +228,15 @@ class YouTubeSummaryApp:
     self.is_first_chunk = True
 
     self.submit_btn.config(
-        state=tk.DISABLED, text="⏳ Wird analysiert...", bg="#94a3b8"
+        state=tk.DISABLED, text="⏳ Analyzing...", bg="#94a3b8"
     )
 
     self.output_text.config(state=tk.NORMAL)
     self.output_text.delete("1.0", tk.END)
     self.output_text.insert(
         tk.END,
-        "⏳ Video wird von Gemini abgerufen und Tonspur analysiert...\n"
-        "Bitte einen kurzen Moment Geduld (bei langen Videos kann die Initialisierung etwas dauern)...\n",
+        "⏳ Fetching the video from Gemini and analyzing the audio track...\n"
+        "Please wait a moment (initialization can take a bit longer for long videos)...\n",
         ("status",),
     )
     self.output_text.config(state=tk.DISABLED)
@@ -271,7 +269,7 @@ class YouTubeSummaryApp:
  
   def reset_ui_state(self):
     self.submit_btn.config(
-        state=tk.NORMAL, text="Zusammenfassen", bg="#0284c7"
+        state=tk.NORMAL, text="Summarize", bg="#0284c7"
     )
 
   def render_markdown(self, text):
@@ -281,25 +279,25 @@ class YouTubeSummaryApp:
     if self.full_markdown_text:
       self.root.clipboard_clear()
       self.root.clipboard_append(self.full_markdown_text)
-      self.copy_btn.config(text="✓ Kopiert!", bg="#bbf7d0", fg="#166534")
+      self.copy_btn.config(text="✓ Copied!", bg="#bbf7d0", fg="#166534")
       self.root.after(
           2000,
           lambda: self.copy_btn.config(
-              text="In Zwischenablage kopieren", bg="#e2e8f0", fg="#334155"
+              text="Copy to clipboard", bg="#e2e8f0", fg="#334155"
           ),
       )
   def add_context_menu(self, entry_widget):
     menu = tk.Menu(entry_widget, tearoff=0)
-    menu.add_command(label="Ausschneiden", command=lambda: entry_widget.event_generate("<<Cut>>"))
-    menu.add_command(label="Kopieren", command=lambda: entry_widget.event_generate("<<Copy>>"))
-    menu.add_command(label="Einfügen", command=lambda: entry_widget.event_generate("<<Paste>>"))
+    menu.add_command(label="Cut", command=lambda: entry_widget.event_generate("<<Cut>>"))
+    menu.add_command(label="Copy", command=lambda: entry_widget.event_generate("<<Copy>>"))
+    menu.add_command(label="Paste", command=lambda: entry_widget.event_generate("<<Paste>>"))
     menu.add_separator()
-    menu.add_command(label="Alles markieren", command=lambda: entry_widget.select_range(0, tk.END))
+    menu.add_command(label="Select all", command=lambda: entry_widget.select_range(0, tk.END))
 
     def show_menu(event):
         menu.tk_popup(event.x_root, event.y_root)
 
-    entry_widget.bind("<Button-3>", show_menu)  # Rechtsklick
+    entry_widget.bind("<Button-3>", show_menu)  # Right-click
 
 if __name__ == "__main__":
   root = tk.Tk()
