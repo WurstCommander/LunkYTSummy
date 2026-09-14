@@ -3,10 +3,47 @@
 ## Screenshot of Video and Summary
 
 ![Screenshot of Summary from Lunk YT Summy](https://github.com/WurstCommander/LunkYTSummy/blob/main/pics/screenshot_readme_wow.jpg)
-
-Video: https://youtu.be/x3qbywIzzuc
-
 *Screenshot of Summary, it even "sees" that somebody is behind him in a Paladin outfit and includes it in the summary.*
+
+Example video: https://youtu.be/x3qbywIzzuc
+
+<details>
+<summary>Summary of the video above - output text from Lunk YT Summy</summary>
+ 
+Exploring Armor Sets and Token Systems
+ 
+• 00:00 - The speaker checks out various high-ranking armor sets in the dressing room, noting that upgrading items requires honor points and specific tokens.
+ 
+• 00:52 - The speaker reacts enthusiastically to weapon models and designs available at the vendors, calling them some of the best in the game.
+
+
+Exploring the Riverglades Zone
+
+• 02:48 - The speaker discovers the new zone "Riverglades," noting a level range of roughly 30 to 38.
+
+• 03:04 - The speaker observes that high-level gnolls are taking over the area, featuring water terrain, battle ruins, and a layout reminiscent of Redridge.
+
+• 03:37 - The speaker tests paladin combat capabilities using Seal of Command against local mobs.
+
+• 04:42 - The speaker stumbles upon a shaman camp and comments on the expansive scale and classic aesthetic of the zone.
+
+• 07:11 - The speaker accepts a quest that increases movement speed and fire damage, praising the zone's immersive, classic feel.
+
+Discovering Dalaran and City Mechanics
+
+• 08:57 - The speaker enters Dalaran, exploring its streets, shops, and vendor locations like the Magus Commerce Exchange.
+
+• 09:07 - The speaker expresses the opinion that restricted name and sex changes are better for the game, as they preserve community recognition and prevent trolling.
+
+• 10:48 - The speaker accidentally attacks elite city guards in Dalaran, resulting in an instant death and humorous commentary on city hostility.
+
+• 11:34 - The speaker investigates landmarks such as The Silver Enclave and Archmage Khadgar's location, testing combat interactions with guards.
+
+Conclusion
+
+The speaker shares a positive first impression of the Riverglades zone and Dalaran, highlighting their classic atmosphere, engaging layout, and exploration value, while expressing strong opinions on community identity and game mechanics.
+
+</details>
 
 ## Description
 
