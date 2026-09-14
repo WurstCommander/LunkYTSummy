@@ -3,9 +3,8 @@
 ## Screenshot of Video and Summary
 
 ![Screenshot of Summary from Lunk YT Summy](https://github.com/WurstCommander/LunkYTSummy/blob/main/pics/screenshot_readme_wow.jpg?raw=true)
-*Screenshot of Summary, it even "sees" that somebody is behind him in a Paladin outfit and includes it in the summary.*
 
-Example video: https://youtu.be/x3qbywIzzuc
+Example video used in screenshot: https://youtu.be/x3qbywIzzuc
 
 <details>
 <summary>Summary of the video above - output text from Lunk YT Summy</summary>
@@ -15,7 +14,6 @@ Exploring Armor Sets and Token Systems
 • 00:00 - The speaker checks out various high-ranking armor sets in the dressing room, noting that upgrading items requires honor points and specific tokens.
  
 • 00:52 - The speaker reacts enthusiastically to weapon models and designs available at the vendors, calling them some of the best in the game.
-
 
 Exploring the Riverglades Zone
 
